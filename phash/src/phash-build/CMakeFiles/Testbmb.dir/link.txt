@@ -1,0 +1,1 @@
+/usr/lib64/ccache/c++ -O2 -g -DNDEBUG CMakeFiles/Testbmb.dir/tests/bmb-imagehash-test.cpp.o -o Testbmb  -Wl,-rpath,/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build libpHash.so.1.0.0 /usr/lib64/libpng.so /usr/lib64/libjpeg.so /usr/lib64/libtiff.so 

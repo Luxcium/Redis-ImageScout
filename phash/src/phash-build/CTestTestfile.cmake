@@ -1,0 +1,38 @@
+# CMake generated Testfile for 
+# Source directory: /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash
+# Build directory: /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+add_test(Test_dct "Testdct" "resources/img1.jpg" "resources/img1.jpg" "0")
+set_tests_properties(Test_dct PROPERTIES  _BACKTRACE_TRIPLES "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;181;add_test;/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;0;")
+add_test(Test_dct2 "Testdct" "resources/img1.jpg" "resources/img2.jpg" "2")
+set_tests_properties(Test_dct2 PROPERTIES  _BACKTRACE_TRIPLES "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;182;add_test;/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;0;")
+add_test(Test_dct3 "Testdct" "resources/img1.jpg" "resources/img3.jpg" "31")
+set_tests_properties(Test_dct3 PROPERTIES  _BACKTRACE_TRIPLES "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;183;add_test;/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;0;")
+add_test(Test_dct4 "Testdct" "resources/img2.jpg" "resources/img3.jpg" "33")
+set_tests_properties(Test_dct4 PROPERTIES  _BACKTRACE_TRIPLES "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;184;add_test;/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;0;")
+add_test(Test_bmb1 "Testbmb" "resources/img1.jpg" "resources/img1.jpg" "0")
+set_tests_properties(Test_bmb1 PROPERTIES  _BACKTRACE_TRIPLES "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;189;add_test;/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;0;")
+add_test(Test_bmb2 "Testbmb" "resources/img1.jpg" "resources/img2.jpg" "0")
+set_tests_properties(Test_bmb2 PROPERTIES  _BACKTRACE_TRIPLES "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;190;add_test;/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;0;")
+add_test(Test_bmb3 "Testbmb" "resources/img1.jpg" "resources/img3.jpg" "150")
+set_tests_properties(Test_bmb3 PROPERTIES  _BACKTRACE_TRIPLES "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;191;add_test;/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;0;")
+add_test(Test_bmb4 "Testbmb" "resources/img2.jpg" "resources/img3.jpg" "150")
+set_tests_properties(Test_bmb4 PROPERTIES  _BACKTRACE_TRIPLES "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;192;add_test;/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;0;")
+add_test(Test_mh1 "Testmh" "resources/img1.jpg" "resources/img1.jpg" "0")
+set_tests_properties(Test_mh1 PROPERTIES  _BACKTRACE_TRIPLES "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;197;add_test;/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;0;")
+add_test(Test_mh2 "Testmh" "resources/img1.jpg" "resources/img2.jpg" "78")
+set_tests_properties(Test_mh2 PROPERTIES  _BACKTRACE_TRIPLES "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;198;add_test;/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;0;")
+add_test(Test_mh3 "Testmh" "resources/img1.jpg" "resources/img3.jpg" "305")
+set_tests_properties(Test_mh3 PROPERTIES  _BACKTRACE_TRIPLES "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;199;add_test;/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;0;")
+add_test(Test_mh4 "Testmh" "resources/img2.jpg" "resources/img3.jpg" "299")
+set_tests_properties(Test_mh4 PROPERTIES  _BACKTRACE_TRIPLES "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;200;add_test;/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;0;")
+add_test(Test_rh1 "Testrh" "resources/img1.jpg" "resources/img1.jpg" "1.0000")
+set_tests_properties(Test_rh1 PROPERTIES  _BACKTRACE_TRIPLES "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;205;add_test;/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;0;")
+add_test(Test_rh2 "Testrh" "resources/img1.jpg" "resources/img2.jpg" "0.999954")
+set_tests_properties(Test_rh2 PROPERTIES  _BACKTRACE_TRIPLES "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;206;add_test;/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;0;")
+add_test(Test_rh3 "Testrh" "resources/img1.jpg" "resources/img3.jpg" "0.843873")
+set_tests_properties(Test_rh3 PROPERTIES  _BACKTRACE_TRIPLES "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;207;add_test;/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;0;")
+add_test(Test_rh4 "Testrh" "resources/img2.jpg" "resources/img3.jpg" "0.843654")
+set_tests_properties(Test_rh4 PROPERTIES  _BACKTRACE_TRIPLES "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;208;add_test;/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/CMakeLists.txt;0;")

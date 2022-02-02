@@ -1,0 +1,3 @@
+repository='external project URL'
+module='https://github.com/redis/hiredis/archive/v1.0.0.tar.gz'
+tag=''

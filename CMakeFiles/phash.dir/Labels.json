@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/phash"
+		},
+		{
+			"file" : "/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/phash.rule"
+		},
+		{
+			"file" : "/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/phash-complete.rule"
+		},
+		{
+			"file" : "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-build.rule"
+		},
+		{
+			"file" : "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-configure.rule"
+		},
+		{
+			"file" : "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-download.rule"
+		},
+		{
+			"file" : "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-install.rule"
+		},
+		{
+			"file" : "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-mkdir.rule"
+		},
+		{
+			"file" : "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-patch.rule"
+		},
+		{
+			"file" : "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"phash"
+		],
+		"name" : "phash"
+	}
+}

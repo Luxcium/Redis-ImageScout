@@ -1,0 +1,89 @@
+HIREDIS_INCLUDE_DIR = ${HOME}/.local/src/Redis-ImageScout/hiredis/include/hiredis
+HIREDIS_LIB = ${HOME}/.local/src/Redis-ImageScout/hiredis/lib/libhiredis.a
+PHASHLIB = ${HOME}/.local/src/Redis-ImageScout/phash/lib/libpHash.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: ${HOME}/.local/src/Redis-ImageScout
+[  4%] Performing update step for 'phash'
+HEAD est maintenant sur 1386cec change CMakelists.txt file to install headers from build directory
+[  9%] No patch step for 'phash'
+[ 13%] Performing configure step for 'phash'
+-- Could NOT find Boost (missing: filesystem system program_options) (found suitable version "1.75.0", minimum required is "1.67.0")
+-- Using Image Hash
+-- phash library sources: src/pHash.cppsrc/bmbhash.cpp
+-- phash library deps: /usr/lib64/libpng.so/usr/lib64/libjpeg.so/usr/lib64/libtiff.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: ${HOME}/.local/src/Redis-ImageScout/phash/src/phash-build
+[ 18%] Performing build step for 'phash'
+Consolidate compiler generated dependencies of target pHash
+[  7%] Building CXX object CMakeFiles/pHash.dir/src/bmbhash.cpp.o
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:3:24: erreur: « BMBHash » n'a pas été déclaré dans cette portée
+    3 | static int _bmb_setbit(BMBHash &bh, uint32_t bit) {
+      |                        ^~~~~~~
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:3:33: erreur: « bh » n'a pas été déclaré dans cette portée
+    3 | static int _bmb_setbit(BMBHash &bh, uint32_t bit) {
+      |                                 ^~
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:3:46: erreur: expected primary-expression before « bit »
+    3 | static int _bmb_setbit(BMBHash &bh, uint32_t bit) {
+      |                                              ^~~
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:3:49: erreur: la liste d'expressions est traitée comme une expression composée dans l'initialisation [-fpermissive]
+    3 | static int _bmb_setbit(BMBHash &bh, uint32_t bit) {
+      |                                                 ^
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:8:13: erreur: variable ou champ « _ph_bmb_new » déclaré « void »
+    8 | static void _ph_bmb_new(BMBHash &bh, uint32_t n_bits) {
+      |             ^~~~~~~~~~~
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:8:25: erreur: « BMBHash » n'a pas été déclaré dans cette portée
+    8 | static void _ph_bmb_new(BMBHash &bh, uint32_t n_bits) {
+      |                         ^~~~~~~
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:8:34: erreur: « bh » n'a pas été déclaré dans cette portée
+    8 | static void _ph_bmb_new(BMBHash &bh, uint32_t n_bits) {
+      |                                  ^~
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:8:47: erreur: expected primary-expression before « n_bits »
+    8 | static void _ph_bmb_new(BMBHash &bh, uint32_t n_bits) {
+      |                                               ^~~~~~
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:16:6: erreur: variable ou champ « ph_bmb_free » déclaré « void »
+   16 | void ph_bmb_free(BMBHash &bh) {
+      |      ^~~~~~~~~~~
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:16:18: erreur: « BMBHash » n'a pas été déclaré dans cette portée
+   16 | void ph_bmb_free(BMBHash &bh) {
+      |                  ^~~~~~~
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:16:27: erreur: « bh » n'a pas été déclaré dans cette portée
+   16 | void ph_bmb_free(BMBHash &bh) {
+      |                           ^~
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:20:40: erreur: « BMBHash » n'a pas été déclaré
+   20 | int ph_bmb_imagehash(const char *file, BMBHash &ret_hash) {
+      |                                        ^~~~~~~
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp: Dans la fonction « int ph_bmb_imagehash(const char*, int&) »:
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:72:9: erreur: « _ph_bmb_new » n'a pas été déclaré dans cette portée
+   72 |         _ph_bmb_new(ret_hash, n_blocks);
+      |         ^~~~~~~~~~~
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:76:36: erreur: « _bmb_setbit » ne peut pas être utilisé comme une fonction
+   76 |                         _bmb_setbit(ret_hash, i);
+      |                         ~~~~~~~~~~~^~~~~~~~~~~~~
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp: Au niveau global:
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:82:27: erreur: « BMBHash » ne nomme pas un type
+   82 | int ph_bmb_distance(const BMBHash &bh1, const BMBHash &bh2){
+      |                           ^~~~~~~
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:82:47: erreur: « BMBHash » ne nomme pas un type
+   82 | int ph_bmb_distance(const BMBHash &bh1, const BMBHash &bh2){
+      |                                               ^~~~~~~
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp: Dans la fonction « int ph_bmb_distance(const int&, const int&) »:
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:84:40: erreur: requête du membre « hash » dans « bh1 », lequel est de type non classe « const int »
+   84 |         return ph_hammingdistance2(bh1.hash, bh1.bytelength, bh2.hash, bh2.bytelength);
+      |                                        ^~~~
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:84:50: erreur: requête du membre « bytelength » dans « bh1 », lequel est de type non classe « const int »
+   84 |         return ph_hammingdistance2(bh1.hash, bh1.bytelength, bh2.hash, bh2.bytelength);
+      |                                                  ^~~~~~~~~~
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:84:66: erreur: requête du membre « hash » dans « bh2 », lequel est de type non classe « const int »
+   84 |         return ph_hammingdistance2(bh1.hash, bh1.bytelength, bh2.hash, bh2.bytelength);
+      |                                                                  ^~~~
+${HOME}/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp:84:76: erreur: requête du membre « bytelength » dans « bh2 », lequel est de type non classe « const int »
+   84 |         return ph_hammingdistance2(bh1.hash, bh1.bytelength, bh2.hash, bh2.bytelength);
+      |                                                                            ^~~~~~~~~~
+make[5]: *** [CMakeFiles/pHash.dir/build.make:90 : CMakeFiles/pHash.dir/src/bmbhash.cpp.o] Erreur 1
+make[4]: *** [CMakeFiles/Makefile2:223 : CMakeFiles/pHash.dir/all] Erreur 2
+make[3]: *** [Makefile:146 : all] Erreur 2
+make[2]: *** [CMakeFiles/phash.dir/build.make:86 : phash/src/phash-stamp/phash-build] Erreur 2
+make[1]: *** [CMakeFiles/Makefile2:142 : CMakeFiles/phash.dir/all] Erreur 2
+make: *** [Makefile:136 : all] Erreur 2

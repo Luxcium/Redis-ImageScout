@@ -1,0 +1,19 @@
+# Hashes of file build rules.
+0d8cd232826a73f467d849ceb5868e46 CMakeFiles/hiredis
+ea86c9b9c30a85fb9d7a84af244fbf54 CMakeFiles/hiredis-complete
+0d8cd232826a73f467d849ceb5868e46 CMakeFiles/phash
+1f67b798adccdd5f8f0e08a2edaca6ba CMakeFiles/phash-complete
+676d7ea9f0619a23de43c4bb691b7b52 hiredis/src/hiredis-stamp/hiredis-build
+db87aa7d2faf8999bb891c82d5c5f33b hiredis/src/hiredis-stamp/hiredis-configure
+d32dceb32b755ad77b0e19506fb80da1 hiredis/src/hiredis-stamp/hiredis-download
+e5e511b73b6691af472a1cb2a1e8349a hiredis/src/hiredis-stamp/hiredis-install
+46ec5ef09e0e1b29da6a854cfcb809e5 hiredis/src/hiredis-stamp/hiredis-mkdir
+a2179ff0271f63a96673e1b25b7f06b2 hiredis/src/hiredis-stamp/hiredis-patch
+372ff233d78b09801eeedbef7a3682ed hiredis/src/hiredis-stamp/hiredis-update
+a684e7127b061aa2ad78d8d4472363a5 phash/src/phash-stamp/phash-build
+eeda19c154b26cfd73149a1640530941 phash/src/phash-stamp/phash-configure
+3f9cde2dc47ec220c130bb60e5633170 phash/src/phash-stamp/phash-download
+5a20d8bf875a3ad12461494fde16780b phash/src/phash-stamp/phash-install
+3cf2878ace641e3b2db228e9780ec1c9 phash/src/phash-stamp/phash-mkdir
+ba296a06a59717611a69b0b763e379e8 phash/src/phash-stamp/phash-patch
+2133868a6def889725f7816084f708f8 phash/src/phash-stamp/phash-update

@@ -1,0 +1,10 @@
+/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/install/strip.dir
+/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/install.dir
+/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/list_install_components.dir
+/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/rebuild_cache.dir
+/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/imgscoutclient.dir
+/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/install/local.dir
+/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/hiredis.dir
+/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/edit_cache.dir
+/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/phash.dir
+/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/imgscout.dir
