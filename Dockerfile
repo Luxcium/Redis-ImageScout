@@ -28,7 +28,7 @@ RUN echo "Building for $OSNICK ($OS) FOR $ARCH"
 
 WORKDIR /build
 COPY --from=redis /usr/local/ /usr/local/
-ADD CMakeLists.txt *.h *.cpp *.hpp  /build/
+ADD CMakeLists.txt *.h *.cpp *.hpp /build/
 
 RUN set -ex;\
 	apt-get -q update ;\
@@ -36,12 +36,12 @@ RUN set -ex;\
 	apt-get install -y --no-install-recommends build-essential cmake
 
 RUN set -ex;\
- 	cmake -DCMAKE_BUILD_TYPE=Release . ;\
+	cmake -DCMAKE_BUILD_TYPE=Release . ;\
 	make
 
 #--------------------------------------------------------------------
 
-FROM redisfab/redis:${REDIS_VER}-${ARCH}-${OSNICK} 
+FROM redisfab/redis:${REDIS_VER}-${ARCH}-${OSNICK}
 
 ARG OSNICK
 ARG OS
@@ -51,13 +51,15 @@ ARG REDIS_VER
 WORKDIR /data
 
 ENV LIBDIR /usr/lib/redis/modules
+ENV LIBREDIS /usr/lib/redis
 
 RUN mkdir -p $LIBDIR
 
 COPY --from=builder /build/imgscout.so "$LIBDIR"
+COPY ./6383.conf "$LIBREDIS"
 
-EXPOSE 6379
+RUN chmod 644 /usr/lib/redis/6383.conf && chown redis /usr/lib/redis/6383.conf
 
-CMD ["redis-server", "--loadmodule", "/usr/lib/redis/modules/imgscout.so"]
+EXPOSE 6383
 
-
+CMD ["redis-server", "/usr/lib/redis/6383.conf"]
