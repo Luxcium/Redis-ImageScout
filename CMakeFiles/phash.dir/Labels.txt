@@ -1,13 +1,13 @@
 # Target labels
  phash
 # Source files and their labels
-/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/phash
-/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/phash.rule
-/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/phash-complete.rule
-/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-build.rule
-/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-configure.rule
-/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-download.rule
-/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-install.rule
-/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-mkdir.rule
-/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-patch.rule
-/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-update.rule
+/home/luxcium/src/Redis-ImageScout/CMakeFiles/phash
+/home/luxcium/src/Redis-ImageScout/CMakeFiles/phash.rule
+/home/luxcium/src/Redis-ImageScout/CMakeFiles/phash-complete.rule
+/home/luxcium/src/Redis-ImageScout/phash/src/phash-stamp/phash-build.rule
+/home/luxcium/src/Redis-ImageScout/phash/src/phash-stamp/phash-configure.rule
+/home/luxcium/src/Redis-ImageScout/phash/src/phash-stamp/phash-download.rule
+/home/luxcium/src/Redis-ImageScout/phash/src/phash-stamp/phash-install.rule
+/home/luxcium/src/Redis-ImageScout/phash/src/phash-stamp/phash-mkdir.rule
+/home/luxcium/src/Redis-ImageScout/phash/src/phash-stamp/phash-patch.rule
+/home/luxcium/src/Redis-ImageScout/phash/src/phash-stamp/phash-update.rule

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 function main() {
   SCRIPT_DIR=$(getSource)
@@ -12,7 +12,7 @@ function main() {
   # cp /usr/lib/redis/modules/rejson.so ./modules
   # cp /usr/lib/redis/modules/redisearch.so ./modules
   docker build --tag luxcium-imgscout:0.1.1 . || return 33
-  ( 
+  (
     (docker container rm imgscout) >/dev/null ||
       (docker container stop imgscout) >/dev/null &&
       (docker container rm imgscout) >/dev/null

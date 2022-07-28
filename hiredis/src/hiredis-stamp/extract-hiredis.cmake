@@ -1,7 +1,7 @@
 # Make file names absolute:
 #
-get_filename_component(filename "/home/luxcium/.local/src/Redis-ImageScout/hiredis/src/v1.0.0.tar.gz" ABSOLUTE)
-get_filename_component(directory "/home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis" ABSOLUTE)
+get_filename_component(filename "/home/luxcium/src/Redis-ImageScout/hiredis/src/v1.0.0.tar.gz" ABSOLUTE)
+get_filename_component(directory "/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis" ABSOLUTE)
 
 message(STATUS "extracting...
      src='${filename}'

@@ -4,7 +4,7 @@
 # compile CXX with /usr/lib64/ccache/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/src
+CXX_INCLUDES = -I/home/luxcium/src/Redis-ImageScout/phash/src/phash/src
 
 CXX_FLAGS = -O2 -g -DNDEBUG
 

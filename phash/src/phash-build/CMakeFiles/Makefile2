@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash
+CMAKE_SOURCE_DIR = /home/luxcium/src/Redis-ImageScout/phash/src/phash
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build
+CMAKE_BINARY_DIR = /home/luxcium/src/Redis-ImageScout/phash/src/phash-build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -91,14 +91,14 @@ clean: CMakeFiles/pHash.dir/clean
 CMakeFiles/Testrh.dir/all: CMakeFiles/pHash.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Testrh.dir/build.make CMakeFiles/Testrh.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Testrh.dir/build.make CMakeFiles/Testrh.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles --progress-num=7,8 "Built target Testrh"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles --progress-num=7,8 "Built target Testrh"
 .PHONY : CMakeFiles/Testrh.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Testrh.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Testrh.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 0
 .PHONY : CMakeFiles/Testrh.dir/rule
 
 # Convenience name for target.
@@ -117,14 +117,14 @@ CMakeFiles/Testrh.dir/clean:
 CMakeFiles/Testmh.dir/all: CMakeFiles/pHash.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Testmh.dir/build.make CMakeFiles/Testmh.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Testmh.dir/build.make CMakeFiles/Testmh.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles --progress-num=5,6 "Built target Testmh"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles --progress-num=5,6 "Built target Testmh"
 .PHONY : CMakeFiles/Testmh.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Testmh.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Testmh.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 0
 .PHONY : CMakeFiles/Testmh.dir/rule
 
 # Convenience name for target.
@@ -143,14 +143,14 @@ CMakeFiles/Testmh.dir/clean:
 CMakeFiles/Testbmb.dir/all: CMakeFiles/pHash.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Testbmb.dir/build.make CMakeFiles/Testbmb.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Testbmb.dir/build.make CMakeFiles/Testbmb.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles --progress-num=1,2 "Built target Testbmb"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles --progress-num=1,2 "Built target Testbmb"
 .PHONY : CMakeFiles/Testbmb.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Testbmb.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Testbmb.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 0
 .PHONY : CMakeFiles/Testbmb.dir/rule
 
 # Convenience name for target.
@@ -169,14 +169,14 @@ CMakeFiles/Testbmb.dir/clean:
 CMakeFiles/imghash.dir/all: CMakeFiles/pHash.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imghash.dir/build.make CMakeFiles/imghash.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imghash.dir/build.make CMakeFiles/imghash.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles --progress-num=9,10 "Built target imghash"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles --progress-num=9,10 "Built target imghash"
 .PHONY : CMakeFiles/imghash.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/imghash.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/imghash.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 0
 .PHONY : CMakeFiles/imghash.dir/rule
 
 # Convenience name for target.
@@ -195,14 +195,14 @@ CMakeFiles/imghash.dir/clean:
 CMakeFiles/Testdct.dir/all: CMakeFiles/pHash.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Testdct.dir/build.make CMakeFiles/Testdct.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Testdct.dir/build.make CMakeFiles/Testdct.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles --progress-num=3,4 "Built target Testdct"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles --progress-num=3,4 "Built target Testdct"
 .PHONY : CMakeFiles/Testdct.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Testdct.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Testdct.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 0
 .PHONY : CMakeFiles/Testdct.dir/rule
 
 # Convenience name for target.
@@ -221,14 +221,14 @@ CMakeFiles/Testdct.dir/clean:
 CMakeFiles/pHash.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pHash.dir/build.make CMakeFiles/pHash.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pHash.dir/build.make CMakeFiles/pHash.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles --progress-num=11,12,13 "Built target pHash"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles --progress-num=11,12,13 "Built target pHash"
 .PHONY : CMakeFiles/pHash.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pHash.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pHash.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles 0
 .PHONY : CMakeFiles/pHash.dir/rule
 
 # Convenience name for target.

@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/luxcium/.local/src/Redis-ImageScout
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/luxcium/.local/src/Redis-ImageScout
+CMAKE_BINARY_DIR = /home/luxcium/src/Redis-ImageScout
 
 # Utility rule file for hiredis.
 
@@ -76,55 +76,55 @@ CMakeFiles/hiredis-complete: hiredis/src/hiredis-stamp/hiredis-patch
 CMakeFiles/hiredis-complete: hiredis/src/hiredis-stamp/hiredis-configure
 CMakeFiles/hiredis-complete: hiredis/src/hiredis-stamp/hiredis-build
 CMakeFiles/hiredis-complete: hiredis/src/hiredis-stamp/hiredis-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'hiredis'"
-	/usr/bin/cmake -E make_directory /home/luxcium/.local/src/Redis-ImageScout/CMakeFiles
-	/usr/bin/cmake -E touch /home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/hiredis-complete
-	/usr/bin/cmake -E touch /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-done
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'hiredis'"
+	/usr/bin/cmake -E make_directory /home/luxcium/src/Redis-ImageScout/CMakeFiles
+	/usr/bin/cmake -E touch /home/luxcium/src/Redis-ImageScout/CMakeFiles/hiredis-complete
+	/usr/bin/cmake -E touch /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-done
 
 hiredis/src/hiredis-stamp/hiredis-build: hiredis/src/hiredis-stamp/hiredis-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Performing build step for 'hiredis'"
-	cd /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis && echo make static
-	cd /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis && /usr/bin/cmake -E touch /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Performing build step for 'hiredis'"
+	cd /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis && echo make static
+	cd /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis && /usr/bin/cmake -E touch /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-build
 
 hiredis/src/hiredis-stamp/hiredis-configure: hiredis/tmp/hiredis-cfgcmd.txt
 hiredis/src/hiredis-stamp/hiredis-configure: hiredis/src/hiredis-stamp/hiredis-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'hiredis'"
-	cd /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis && /usr/bin/cmake -E echo_append
-	cd /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis && /usr/bin/cmake -E touch /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-configure
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'hiredis'"
+	cd /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis && /usr/bin/cmake -E echo_append
+	cd /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis && /usr/bin/cmake -E touch /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-configure
 
 hiredis/src/hiredis-stamp/hiredis-download: hiredis/src/hiredis-stamp/hiredis-urlinfo.txt
 hiredis/src/hiredis-stamp/hiredis-download: hiredis/src/hiredis-stamp/hiredis-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (download, verify and extract) for 'hiredis'"
-	cd /home/luxcium/.local/src/Redis-ImageScout/hiredis/src && /usr/bin/cmake -P /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp/download-hiredis.cmake
-	cd /home/luxcium/.local/src/Redis-ImageScout/hiredis/src && /usr/bin/cmake -P /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp/verify-hiredis.cmake
-	cd /home/luxcium/.local/src/Redis-ImageScout/hiredis/src && /usr/bin/cmake -P /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp/extract-hiredis.cmake
-	cd /home/luxcium/.local/src/Redis-ImageScout/hiredis/src && /usr/bin/cmake -E touch /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (download, verify and extract) for 'hiredis'"
+	cd /home/luxcium/src/Redis-ImageScout/hiredis/src && /usr/bin/cmake -P /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/download-hiredis.cmake
+	cd /home/luxcium/src/Redis-ImageScout/hiredis/src && /usr/bin/cmake -P /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/verify-hiredis.cmake
+	cd /home/luxcium/src/Redis-ImageScout/hiredis/src && /usr/bin/cmake -P /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/extract-hiredis.cmake
+	cd /home/luxcium/src/Redis-ImageScout/hiredis/src && /usr/bin/cmake -E touch /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-download
 
 hiredis/src/hiredis-stamp/hiredis-install: hiredis/src/hiredis-stamp/hiredis-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Performing install step for 'hiredis'"
-	cd /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis && make install PREFIX=/home/luxcium/.local/src/Redis-ImageScout/hiredis
-	cd /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis && /usr/bin/cmake -E touch /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-install
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Performing install step for 'hiredis'"
+	cd /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis && make install PREFIX=/home/luxcium/src/Redis-ImageScout/hiredis
+	cd /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis && /usr/bin/cmake -E touch /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-install
 
 hiredis/src/hiredis-stamp/hiredis-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'hiredis'"
-	/usr/bin/cmake -E make_directory /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis
-	/usr/bin/cmake -E make_directory /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis
-	/usr/bin/cmake -E make_directory /home/luxcium/.local/src/Redis-ImageScout/hiredis
-	/usr/bin/cmake -E make_directory /home/luxcium/.local/src/Redis-ImageScout/hiredis/tmp
-	/usr/bin/cmake -E make_directory /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp
-	/usr/bin/cmake -E make_directory /home/luxcium/.local/src/Redis-ImageScout/hiredis/src
-	/usr/bin/cmake -E make_directory /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp
-	/usr/bin/cmake -E touch /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-mkdir
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'hiredis'"
+	/usr/bin/cmake -E make_directory /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis
+	/usr/bin/cmake -E make_directory /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis
+	/usr/bin/cmake -E make_directory /home/luxcium/src/Redis-ImageScout/hiredis
+	/usr/bin/cmake -E make_directory /home/luxcium/src/Redis-ImageScout/hiredis/tmp
+	/usr/bin/cmake -E make_directory /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp
+	/usr/bin/cmake -E make_directory /home/luxcium/src/Redis-ImageScout/hiredis/src
+	/usr/bin/cmake -E make_directory /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp
+	/usr/bin/cmake -E touch /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-mkdir
 
 hiredis/src/hiredis-stamp/hiredis-patch: hiredis/src/hiredis-stamp/hiredis-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'hiredis'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'hiredis'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-patch
+	/usr/bin/cmake -E touch /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-patch
 
 hiredis/src/hiredis-stamp/hiredis-update: hiredis/src/hiredis-stamp/hiredis-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No update step for 'hiredis'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No update step for 'hiredis'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-update
+	/usr/bin/cmake -E touch /home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-update
 
 hiredis: CMakeFiles/hiredis
 hiredis: CMakeFiles/hiredis-complete
@@ -147,6 +147,6 @@ CMakeFiles/hiredis.dir/clean:
 .PHONY : CMakeFiles/hiredis.dir/clean
 
 CMakeFiles/hiredis.dir/depend:
-	cd /home/luxcium/.local/src/Redis-ImageScout && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/luxcium/.local/src/Redis-ImageScout /home/luxcium/.local/src/Redis-ImageScout /home/luxcium/.local/src/Redis-ImageScout /home/luxcium/.local/src/Redis-ImageScout /home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/hiredis.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/luxcium/src/Redis-ImageScout && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/luxcium/.local/src/Redis-ImageScout /home/luxcium/src/Redis-ImageScout /home/luxcium/src/Redis-ImageScout /home/luxcium/src/Redis-ImageScout /home/luxcium/src/Redis-ImageScout/CMakeFiles/hiredis.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/hiredis.dir/depend
 

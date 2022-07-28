@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/luxcium/.local/src/Redis-ImageScout
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/luxcium/.local/src/Redis-ImageScout
+CMAKE_BINARY_DIR = /home/luxcium/src/Redis-ImageScout
 
 # Utility rule file for phash.
 
@@ -76,52 +76,52 @@ CMakeFiles/phash-complete: phash/src/phash-stamp/phash-patch
 CMakeFiles/phash-complete: phash/src/phash-stamp/phash-configure
 CMakeFiles/phash-complete: phash/src/phash-stamp/phash-build
 CMakeFiles/phash-complete: phash/src/phash-stamp/phash-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'phash'"
-	/usr/bin/cmake -E make_directory /home/luxcium/.local/src/Redis-ImageScout/CMakeFiles
-	/usr/bin/cmake -E touch /home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/phash-complete
-	/usr/bin/cmake -E touch /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-done
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'phash'"
+	/usr/bin/cmake -E make_directory /home/luxcium/src/Redis-ImageScout/CMakeFiles
+	/usr/bin/cmake -E touch /home/luxcium/src/Redis-ImageScout/CMakeFiles/phash-complete
+	/usr/bin/cmake -E touch /home/luxcium/src/Redis-ImageScout/phash/src/phash-stamp/phash-done
 
 phash/src/phash-stamp/phash-build: phash/src/phash-stamp/phash-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Performing build step for 'phash'"
-	cd /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build && $(MAKE)
-	cd /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build && /usr/bin/cmake -E touch /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Performing build step for 'phash'"
+	cd /home/luxcium/src/Redis-ImageScout/phash/src/phash-build && $(MAKE)
+	cd /home/luxcium/src/Redis-ImageScout/phash/src/phash-build && /usr/bin/cmake -E touch /home/luxcium/src/Redis-ImageScout/phash/src/phash-stamp/phash-build
 
 phash/src/phash-stamp/phash-configure: phash/tmp/phash-cfgcmd.txt
 phash/src/phash-stamp/phash-configure: phash/src/phash-stamp/phash-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Performing configure step for 'phash'"
-	cd /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build && /usr/bin/cmake -DCMAKE_INSTALL_PREFIX=/home/luxcium/.local/src/Redis-ImageScout/phash -DCMAKE_BUILD_TYPE=RelWithDebInfo -DUSE_IMAGE_HASH=ON -DUSE_AUDIO_HASH=OFF -DUSE_VIDEO_HASH=OFF -DUSE_TEXT_HASH=OFF "-GUnix Makefiles" /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash
-	cd /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build && /usr/bin/cmake -E touch /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-configure
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Performing configure step for 'phash'"
+	cd /home/luxcium/src/Redis-ImageScout/phash/src/phash-build && /usr/bin/cmake -DCMAKE_INSTALL_PREFIX=/home/luxcium/src/Redis-ImageScout/phash -DCMAKE_BUILD_TYPE=RelWithDebInfo -DUSE_IMAGE_HASH=ON -DUSE_AUDIO_HASH=OFF -DUSE_VIDEO_HASH=OFF -DUSE_TEXT_HASH=OFF "-GUnix Makefiles" /home/luxcium/src/Redis-ImageScout/phash/src/phash
+	cd /home/luxcium/src/Redis-ImageScout/phash/src/phash-build && /usr/bin/cmake -E touch /home/luxcium/src/Redis-ImageScout/phash/src/phash-stamp/phash-configure
 
 phash/src/phash-stamp/phash-download: phash/src/phash-stamp/phash-gitinfo.txt
 phash/src/phash-stamp/phash-download: phash/src/phash-stamp/phash-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'phash'"
-	cd /home/luxcium/.local/src/Redis-ImageScout/phash/src && /usr/bin/cmake -P /home/luxcium/.local/src/Redis-ImageScout/phash/tmp/phash-gitclone.cmake
-	cd /home/luxcium/.local/src/Redis-ImageScout/phash/src && /usr/bin/cmake -E touch /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'phash'"
+	cd /home/luxcium/src/Redis-ImageScout/phash/src && /usr/bin/cmake -P /home/luxcium/src/Redis-ImageScout/phash/tmp/phash-gitclone.cmake
+	cd /home/luxcium/src/Redis-ImageScout/phash/src && /usr/bin/cmake -E touch /home/luxcium/src/Redis-ImageScout/phash/src/phash-stamp/phash-download
 
 phash/src/phash-stamp/phash-install: phash/src/phash-stamp/phash-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Performing install step for 'phash'"
-	cd /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build && $(MAKE) install
-	cd /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build && /usr/bin/cmake -E touch /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-install
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Performing install step for 'phash'"
+	cd /home/luxcium/src/Redis-ImageScout/phash/src/phash-build && $(MAKE) install
+	cd /home/luxcium/src/Redis-ImageScout/phash/src/phash-build && /usr/bin/cmake -E touch /home/luxcium/src/Redis-ImageScout/phash/src/phash-stamp/phash-install
 
 phash/src/phash-stamp/phash-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'phash'"
-	/usr/bin/cmake -E make_directory /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash
-	/usr/bin/cmake -E make_directory /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build
-	/usr/bin/cmake -E make_directory /home/luxcium/.local/src/Redis-ImageScout/phash
-	/usr/bin/cmake -E make_directory /home/luxcium/.local/src/Redis-ImageScout/phash/tmp
-	/usr/bin/cmake -E make_directory /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp
-	/usr/bin/cmake -E make_directory /home/luxcium/.local/src/Redis-ImageScout/phash/src
-	/usr/bin/cmake -E make_directory /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp
-	/usr/bin/cmake -E touch /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-mkdir
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'phash'"
+	/usr/bin/cmake -E make_directory /home/luxcium/src/Redis-ImageScout/phash/src/phash
+	/usr/bin/cmake -E make_directory /home/luxcium/src/Redis-ImageScout/phash/src/phash-build
+	/usr/bin/cmake -E make_directory /home/luxcium/src/Redis-ImageScout/phash
+	/usr/bin/cmake -E make_directory /home/luxcium/src/Redis-ImageScout/phash/tmp
+	/usr/bin/cmake -E make_directory /home/luxcium/src/Redis-ImageScout/phash/src/phash-stamp
+	/usr/bin/cmake -E make_directory /home/luxcium/src/Redis-ImageScout/phash/src
+	/usr/bin/cmake -E make_directory /home/luxcium/src/Redis-ImageScout/phash/src/phash-stamp
+	/usr/bin/cmake -E touch /home/luxcium/src/Redis-ImageScout/phash/src/phash-stamp/phash-mkdir
 
 phash/src/phash-stamp/phash-patch: phash/src/phash-stamp/phash-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'phash'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'phash'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-stamp/phash-patch
+	/usr/bin/cmake -E touch /home/luxcium/src/Redis-ImageScout/phash/src/phash-stamp/phash-patch
 
 phash/src/phash-stamp/phash-update: phash/src/phash-stamp/phash-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Performing update step for 'phash'"
-	cd /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash && /usr/bin/cmake -P /home/luxcium/.local/src/Redis-ImageScout/phash/tmp/phash-gitupdate.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Performing update step for 'phash'"
+	cd /home/luxcium/src/Redis-ImageScout/phash/src/phash && /usr/bin/cmake -P /home/luxcium/src/Redis-ImageScout/phash/tmp/phash-gitupdate.cmake
 
 phash: CMakeFiles/phash
 phash: CMakeFiles/phash-complete
@@ -144,6 +144,6 @@ CMakeFiles/phash.dir/clean:
 .PHONY : CMakeFiles/phash.dir/clean
 
 CMakeFiles/phash.dir/depend:
-	cd /home/luxcium/.local/src/Redis-ImageScout && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/luxcium/.local/src/Redis-ImageScout /home/luxcium/.local/src/Redis-ImageScout /home/luxcium/.local/src/Redis-ImageScout /home/luxcium/.local/src/Redis-ImageScout /home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/phash.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/luxcium/src/Redis-ImageScout && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/luxcium/.local/src/Redis-ImageScout /home/luxcium/src/Redis-ImageScout /home/luxcium/src/Redis-ImageScout /home/luxcium/src/Redis-ImageScout /home/luxcium/src/Redis-ImageScout/CMakeFiles/phash.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/phash.dir/depend
 

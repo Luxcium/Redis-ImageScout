@@ -1,13 +1,13 @@
 # Target labels
  hiredis
 # Source files and their labels
-/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/hiredis
-/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/hiredis.rule
-/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/hiredis-complete.rule
-/home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-build.rule
-/home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-configure.rule
-/home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-download.rule
-/home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-install.rule
-/home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-mkdir.rule
-/home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-patch.rule
-/home/luxcium/.local/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-update.rule
+/home/luxcium/src/Redis-ImageScout/CMakeFiles/hiredis
+/home/luxcium/src/Redis-ImageScout/CMakeFiles/hiredis.rule
+/home/luxcium/src/Redis-ImageScout/CMakeFiles/hiredis-complete.rule
+/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-build.rule
+/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-configure.rule
+/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-download.rule
+/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-install.rule
+/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-mkdir.rule
+/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-patch.rule
+/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-update.rule

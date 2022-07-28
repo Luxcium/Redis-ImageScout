@@ -1,5 +1,5 @@
 CMakeFiles/pHash.dir/src/bmbhash.cpp.o: \
- /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp \
+ /home/luxcium/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp \
  /usr/include/stdc-predef.h /usr/local/include/pHash.h \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/limits.h \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/syslimits.h \
@@ -105,7 +105,7 @@ CMakeFiles/pHash.dir/src/bmbhash.cpp.o: \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/wchar.h \
  /usr/include/bits/stdint-uintn.h \
- /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/src/CImg.h \
+ /home/luxcium/src/Redis-ImageScout/phash/src/phash/src/CImg.h \
  /usr/include/c++/11/cstdio /usr/include/c++/11/cstdarg \
  /usr/include/c++/11/cstring /usr/include/c++/11/cfloat \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/float.h \

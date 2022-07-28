@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/luxcium/.local/src/Redis-ImageScout
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/luxcium/.local/src/Redis-ImageScout
+CMAKE_BINARY_DIR = /home/luxcium/src/Redis-ImageScout
 
 # Include any dependencies generated for this target.
 include CMakeFiles/imgscout.dir/depend.make
@@ -72,44 +72,44 @@ include CMakeFiles/imgscout.dir/flags.make
 CMakeFiles/imgscout.dir/module.cpp.o: CMakeFiles/imgscout.dir/flags.make
 CMakeFiles/imgscout.dir/module.cpp.o: module.cpp
 CMakeFiles/imgscout.dir/module.cpp.o: CMakeFiles/imgscout.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/imgscout.dir/module.cpp.o"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgscout.dir/module.cpp.o -MF CMakeFiles/imgscout.dir/module.cpp.o.d -o CMakeFiles/imgscout.dir/module.cpp.o -c /home/luxcium/.local/src/Redis-ImageScout/module.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/imgscout.dir/module.cpp.o"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgscout.dir/module.cpp.o -MF CMakeFiles/imgscout.dir/module.cpp.o.d -o CMakeFiles/imgscout.dir/module.cpp.o -c /home/luxcium/src/Redis-ImageScout/module.cpp
 
 CMakeFiles/imgscout.dir/module.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imgscout.dir/module.cpp.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luxcium/.local/src/Redis-ImageScout/module.cpp > CMakeFiles/imgscout.dir/module.cpp.i
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luxcium/src/Redis-ImageScout/module.cpp > CMakeFiles/imgscout.dir/module.cpp.i
 
 CMakeFiles/imgscout.dir/module.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imgscout.dir/module.cpp.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luxcium/.local/src/Redis-ImageScout/module.cpp -o CMakeFiles/imgscout.dir/module.cpp.s
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luxcium/src/Redis-ImageScout/module.cpp -o CMakeFiles/imgscout.dir/module.cpp.s
 
 CMakeFiles/imgscout.dir/mvptree.cpp.o: CMakeFiles/imgscout.dir/flags.make
 CMakeFiles/imgscout.dir/mvptree.cpp.o: mvptree.cpp
 CMakeFiles/imgscout.dir/mvptree.cpp.o: CMakeFiles/imgscout.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/imgscout.dir/mvptree.cpp.o"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgscout.dir/mvptree.cpp.o -MF CMakeFiles/imgscout.dir/mvptree.cpp.o.d -o CMakeFiles/imgscout.dir/mvptree.cpp.o -c /home/luxcium/.local/src/Redis-ImageScout/mvptree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/imgscout.dir/mvptree.cpp.o"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgscout.dir/mvptree.cpp.o -MF CMakeFiles/imgscout.dir/mvptree.cpp.o.d -o CMakeFiles/imgscout.dir/mvptree.cpp.o -c /home/luxcium/src/Redis-ImageScout/mvptree.cpp
 
 CMakeFiles/imgscout.dir/mvptree.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imgscout.dir/mvptree.cpp.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luxcium/.local/src/Redis-ImageScout/mvptree.cpp > CMakeFiles/imgscout.dir/mvptree.cpp.i
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luxcium/src/Redis-ImageScout/mvptree.cpp > CMakeFiles/imgscout.dir/mvptree.cpp.i
 
 CMakeFiles/imgscout.dir/mvptree.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imgscout.dir/mvptree.cpp.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luxcium/.local/src/Redis-ImageScout/mvptree.cpp -o CMakeFiles/imgscout.dir/mvptree.cpp.s
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luxcium/src/Redis-ImageScout/mvptree.cpp -o CMakeFiles/imgscout.dir/mvptree.cpp.s
 
 CMakeFiles/imgscout.dir/mvpnode.cpp.o: CMakeFiles/imgscout.dir/flags.make
 CMakeFiles/imgscout.dir/mvpnode.cpp.o: mvpnode.cpp
 CMakeFiles/imgscout.dir/mvpnode.cpp.o: CMakeFiles/imgscout.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/imgscout.dir/mvpnode.cpp.o"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgscout.dir/mvpnode.cpp.o -MF CMakeFiles/imgscout.dir/mvpnode.cpp.o.d -o CMakeFiles/imgscout.dir/mvpnode.cpp.o -c /home/luxcium/.local/src/Redis-ImageScout/mvpnode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/imgscout.dir/mvpnode.cpp.o"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/imgscout.dir/mvpnode.cpp.o -MF CMakeFiles/imgscout.dir/mvpnode.cpp.o.d -o CMakeFiles/imgscout.dir/mvpnode.cpp.o -c /home/luxcium/src/Redis-ImageScout/mvpnode.cpp
 
 CMakeFiles/imgscout.dir/mvpnode.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/imgscout.dir/mvpnode.cpp.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luxcium/.local/src/Redis-ImageScout/mvpnode.cpp > CMakeFiles/imgscout.dir/mvpnode.cpp.i
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luxcium/src/Redis-ImageScout/mvpnode.cpp > CMakeFiles/imgscout.dir/mvpnode.cpp.i
 
 CMakeFiles/imgscout.dir/mvpnode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/imgscout.dir/mvpnode.cpp.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luxcium/.local/src/Redis-ImageScout/mvpnode.cpp -o CMakeFiles/imgscout.dir/mvpnode.cpp.s
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luxcium/src/Redis-ImageScout/mvpnode.cpp -o CMakeFiles/imgscout.dir/mvpnode.cpp.s
 
 # Object files for target imgscout
 imgscout_OBJECTS = \
@@ -125,7 +125,7 @@ imgscout.so: CMakeFiles/imgscout.dir/mvptree.cpp.o
 imgscout.so: CMakeFiles/imgscout.dir/mvpnode.cpp.o
 imgscout.so: CMakeFiles/imgscout.dir/build.make
 imgscout.so: CMakeFiles/imgscout.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared module imgscout.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luxcium/src/Redis-ImageScout/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared module imgscout.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/imgscout.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -137,6 +137,6 @@ CMakeFiles/imgscout.dir/clean:
 .PHONY : CMakeFiles/imgscout.dir/clean
 
 CMakeFiles/imgscout.dir/depend:
-	cd /home/luxcium/.local/src/Redis-ImageScout && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/luxcium/.local/src/Redis-ImageScout /home/luxcium/.local/src/Redis-ImageScout /home/luxcium/.local/src/Redis-ImageScout /home/luxcium/.local/src/Redis-ImageScout /home/luxcium/.local/src/Redis-ImageScout/CMakeFiles/imgscout.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/luxcium/src/Redis-ImageScout && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/luxcium/.local/src/Redis-ImageScout /home/luxcium/src/Redis-ImageScout /home/luxcium/src/Redis-ImageScout /home/luxcium/src/Redis-ImageScout /home/luxcium/src/Redis-ImageScout/CMakeFiles/imgscout.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/imgscout.dir/depend
 

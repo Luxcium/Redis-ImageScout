@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/luxcium/.local/src/Redis-ImageScout/imgscoutclient.cpp" "CMakeFiles/imgscoutclient.dir/imgscoutclient.cpp.o" "gcc" "CMakeFiles/imgscoutclient.dir/imgscoutclient.cpp.o.d"
+  "/home/luxcium/src/Redis-ImageScout/imgscoutclient.cpp" "CMakeFiles/imgscoutclient.dir/imgscoutclient.cpp.o" "gcc" "CMakeFiles/imgscoutclient.dir/imgscoutclient.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/examples/imghash.cpp" "CMakeFiles/imghash.dir/examples/imghash.cpp.o" "gcc" "CMakeFiles/imghash.dir/examples/imghash.cpp.o.d"
+  "/home/luxcium/src/Redis-ImageScout/phash/src/phash/examples/imghash.cpp" "CMakeFiles/imghash.dir/examples/imghash.cpp.o" "gcc" "CMakeFiles/imghash.dir/examples/imghash.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles/pHash.dir/DependInfo.cmake"
+  "/home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles/pHash.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

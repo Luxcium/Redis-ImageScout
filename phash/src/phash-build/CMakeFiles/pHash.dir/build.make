@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash
+CMAKE_SOURCE_DIR = /home/luxcium/src/Redis-ImageScout/phash/src/phash
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build
+CMAKE_BINARY_DIR = /home/luxcium/src/Redis-ImageScout/phash/src/phash-build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/pHash.dir/depend.make
@@ -70,32 +70,32 @@ include CMakeFiles/pHash.dir/progress.make
 include CMakeFiles/pHash.dir/flags.make
 
 CMakeFiles/pHash.dir/src/pHash.cpp.o: CMakeFiles/pHash.dir/flags.make
-CMakeFiles/pHash.dir/src/pHash.cpp.o: /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/src/pHash.cpp
+CMakeFiles/pHash.dir/src/pHash.cpp.o: /home/luxcium/src/Redis-ImageScout/phash/src/phash/src/pHash.cpp
 CMakeFiles/pHash.dir/src/pHash.cpp.o: CMakeFiles/pHash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/pHash.dir/src/pHash.cpp.o"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pHash.dir/src/pHash.cpp.o -MF CMakeFiles/pHash.dir/src/pHash.cpp.o.d -o CMakeFiles/pHash.dir/src/pHash.cpp.o -c /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/src/pHash.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/pHash.dir/src/pHash.cpp.o"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pHash.dir/src/pHash.cpp.o -MF CMakeFiles/pHash.dir/src/pHash.cpp.o.d -o CMakeFiles/pHash.dir/src/pHash.cpp.o -c /home/luxcium/src/Redis-ImageScout/phash/src/phash/src/pHash.cpp
 
 CMakeFiles/pHash.dir/src/pHash.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pHash.dir/src/pHash.cpp.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/src/pHash.cpp > CMakeFiles/pHash.dir/src/pHash.cpp.i
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luxcium/src/Redis-ImageScout/phash/src/phash/src/pHash.cpp > CMakeFiles/pHash.dir/src/pHash.cpp.i
 
 CMakeFiles/pHash.dir/src/pHash.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pHash.dir/src/pHash.cpp.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/src/pHash.cpp -o CMakeFiles/pHash.dir/src/pHash.cpp.s
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luxcium/src/Redis-ImageScout/phash/src/phash/src/pHash.cpp -o CMakeFiles/pHash.dir/src/pHash.cpp.s
 
 CMakeFiles/pHash.dir/src/bmbhash.cpp.o: CMakeFiles/pHash.dir/flags.make
-CMakeFiles/pHash.dir/src/bmbhash.cpp.o: /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp
+CMakeFiles/pHash.dir/src/bmbhash.cpp.o: /home/luxcium/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp
 CMakeFiles/pHash.dir/src/bmbhash.cpp.o: CMakeFiles/pHash.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pHash.dir/src/bmbhash.cpp.o"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pHash.dir/src/bmbhash.cpp.o -MF CMakeFiles/pHash.dir/src/bmbhash.cpp.o.d -o CMakeFiles/pHash.dir/src/bmbhash.cpp.o -c /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pHash.dir/src/bmbhash.cpp.o"
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pHash.dir/src/bmbhash.cpp.o -MF CMakeFiles/pHash.dir/src/bmbhash.cpp.o.d -o CMakeFiles/pHash.dir/src/bmbhash.cpp.o -c /home/luxcium/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp
 
 CMakeFiles/pHash.dir/src/bmbhash.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pHash.dir/src/bmbhash.cpp.i"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp > CMakeFiles/pHash.dir/src/bmbhash.cpp.i
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luxcium/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp > CMakeFiles/pHash.dir/src/bmbhash.cpp.i
 
 CMakeFiles/pHash.dir/src/bmbhash.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pHash.dir/src/bmbhash.cpp.s"
-	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp -o CMakeFiles/pHash.dir/src/bmbhash.cpp.s
+	/usr/lib64/ccache/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luxcium/src/Redis-ImageScout/phash/src/phash/src/bmbhash.cpp -o CMakeFiles/pHash.dir/src/bmbhash.cpp.s
 
 # Object files for target pHash
 pHash_OBJECTS = \
@@ -109,7 +109,7 @@ libpHash.so.1.0.0: CMakeFiles/pHash.dir/src/pHash.cpp.o
 libpHash.so.1.0.0: CMakeFiles/pHash.dir/src/bmbhash.cpp.o
 libpHash.so.1.0.0: CMakeFiles/pHash.dir/build.make
 libpHash.so.1.0.0: CMakeFiles/pHash.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libpHash.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libpHash.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pHash.dir/link.txt --verbose=$(VERBOSE)
 	$(CMAKE_COMMAND) -E cmake_symlink_library libpHash.so.1.0.0 libpHash.so.1.0.0 libpHash.so
 
@@ -125,6 +125,6 @@ CMakeFiles/pHash.dir/clean:
 .PHONY : CMakeFiles/pHash.dir/clean
 
 CMakeFiles/pHash.dir/depend:
-	cd /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build /home/luxcium/.local/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles/pHash.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/luxcium/src/Redis-ImageScout/phash/src/phash-build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/luxcium/src/Redis-ImageScout/phash/src/phash /home/luxcium/src/Redis-ImageScout/phash/src/phash /home/luxcium/src/Redis-ImageScout/phash/src/phash-build /home/luxcium/src/Redis-ImageScout/phash/src/phash-build /home/luxcium/src/Redis-ImageScout/phash/src/phash-build/CMakeFiles/pHash.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/pHash.dir/depend
 
