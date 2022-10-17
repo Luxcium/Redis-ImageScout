@@ -1,6 +1,8 @@
 # BUILD starkdg/imagescout:${VERSION}-${ARCH}-${OSNICK}
 
-ARG REDIS_VER=6.0.7
+# ARG REDIS_VER=6.0.7
+
+ARG REDIS_VER=7.0.4
 
 # bionic|stretch|buster|etc
 ARG OSNICK=buster
@@ -12,8 +14,9 @@ ARG OS=debian:buster-slim
 ARG ARCH=x64
 
 #---------------------------------------------------------------------
-
-FROM redisfab/redis:${REDIS_VER}-${ARCH}-${OSNICK} AS redis
+# redisfab/redis-stack-server:6.2.4-v1
+# FROM redisfab/redis:${REDIS_VER}-${ARCH}-${OSNICK} AS redis
+FROM redisfab/redis-stack-server:6.2.4-v1 AS redis
 
 # Build based on ${OS} (i.e. 'builder'), redis files are copies from 'redis'
 FROM ${OS} AS builder
@@ -41,7 +44,8 @@ RUN set -ex;\
 
 #--------------------------------------------------------------------
 
-FROM redisfab/redis:${REDIS_VER}-${ARCH}-${OSNICK}
+# FROM redisfab/redis:${REDIS_VER}-${ARCH}-${OSNICK}
+FROM redisfab/redis-stack-server:6.2.4-v1
 
 ARG OSNICK
 ARG OS
@@ -57,8 +61,8 @@ RUN mkdir -p $LIBDIR
 
 COPY --from=builder /build/imgscout.so "$LIBDIR"
 COPY ./6383.conf "$LIBREDIS"
-
-RUN chmod 644 /usr/lib/redis/6383.conf && chown redis /usr/lib/redis/6383.conf
+# sudo useradd username
+RUN chmod 644 /usr/lib/redis/6383.conf && useradd redis && chown redis /usr/lib/redis/6383.conf
 
 EXPOSE 6383
 
