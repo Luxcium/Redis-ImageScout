@@ -16,7 +16,7 @@ function main() {
       (docker container stop imgscout) >/dev/null &&
       (docker container rm imgscout) >/dev/null
   ) 2>/dev/null
-  docker run -d --publish 6383:6383 --volume "${REDIS_MOUNT}":/data --name imgscout luxcium-imgscout:0.1.1 || return 55
+  docker run -d --rm --publish 6383:6383 --volume "${REDIS_MOUNT}":/data --name imgscout luxcium-imgscout:0.1.1 || return 55
 }
 
 function getSource() {
