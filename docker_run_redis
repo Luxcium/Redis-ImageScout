@@ -4,15 +4,15 @@ function main() {
   SCRIPT_DIR=$(getSource)
   cd "$SCRIPT_DIR" || return
   # ROOT=$(cd $HERE/.. && pwd)
-  REDIS_MOUNT="${HOME}"/WSD_250/redis/6383
+  REDIS_MOUNT="${HOME}"/DATA/redis/6383
 
-  mkdir -p modules/
+  # mkdir -p modules/
 
   # TODO:
   # cp /usr/lib/redis/modules/rejson.so ./modules
   # cp /usr/lib/redis/modules/redisearch.so ./modules
   docker build --tag luxcium-imgscout:0.1.1 . || return 33
-  (
+  ( 
     (docker container rm imgscout) >/dev/null ||
       (docker container stop imgscout) >/dev/null &&
       (docker container rm imgscout) >/dev/null
@@ -28,9 +28,12 @@ function getSource() {
     SOURCE=$(readlink "$SOURCE")
     [[ $SOURCE != /* ]] && SOURCE=$DIR/$SOURCE # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
   done
-   (cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)
+  (cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)
 }
+
+pwd
 main
+pwd
 
 unset -f main
 unset -f getSource
