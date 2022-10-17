@@ -3,21 +3,19 @@
 function main() {
   SCRIPT_DIR=$(getSource)
   cd "$SCRIPT_DIR" || return
-  # ROOT=$(cd $HERE/.. && pwd)
   REDIS_MOUNT="${HOME}"/DATA/redis/6383
 
-  # mkdir -p modules/
-
   # TODO:
+  # mkdir -p modules/
   # cp /usr/lib/redis/modules/rejson.so ./modules
   # cp /usr/lib/redis/modules/redisearch.so ./modules
+
   docker build --tag luxcium-imgscout:0.1.1 . || return 33
   ( 
     (docker container rm imgscout) >/dev/null ||
       (docker container stop imgscout) >/dev/null &&
       (docker container rm imgscout) >/dev/null
   ) 2>/dev/null
-  # docker run -d --publish 6373:6383 --volume "${HOME}"/WSD_250/redis/6373:/data --name imgscout-7 luxcium-imgscout:7.0.4 || exit 55
   docker run -d --publish 6383:6383 --volume "${REDIS_MOUNT}":/data --name imgscout luxcium-imgscout:0.1.1 || return 55
 }
 
