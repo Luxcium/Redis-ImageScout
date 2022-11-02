@@ -1,2 +1,9 @@
 build
 .history
+common/performance/bigintString.cpuprofile
+common/performance/boxed-list.cpuprofile
+common/performance/colors-tools.cpuprofile
+common/performance/human-size.cpuprofile
+common/performance/parallel-mapper.cpuprofile
+common/performance/restraining-zalgo.cpuprofile
+common/performance/tools.cpuprofile
