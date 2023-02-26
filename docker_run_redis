@@ -3,17 +3,14 @@
 function main() {
   SCRIPT_DIR=$(getSource)
   cd "$SCRIPT_DIR" || return
+
   REDIS_MOUNT="${HOME}"/DATA/redis/6383
 
   docker build --tag luxcium-imgscout:0.1.1 . || return 33
-  ( 
-    (docker container rm imgscout) >/dev/null ||
-      (docker container stop imgscout) >/dev/null &&
-      (docker container rm imgscout) >/dev/null
-  ) 2>/dev/null
-  docker run --interactive --tty --rm --publish 6383:6383 --volume "${REDIS_MOUNT}":/data --name imgscout luxcium-imgscout:0.1.1 || return 55
+  (docker container rm -f imgscout) >/dev/null 2>&1
+  docker run --detach --rm --publish 6383:6383 --volume "${REDIS_MOUNT}":/data --name imgscout luxcium-imgscout:0.1.1 || return 55
 }
-#  --detach
+
 function getSource() {
   SOURCE=${BASH_SOURCE[0]}
   while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
@@ -24,9 +21,7 @@ function getSource() {
   (cd -P "$(dirname "$SOURCE")" >/dev/null 2>&1 && pwd)
 }
 
-pwd
 main
-pwd
 
 unset -f main
 unset -f getSource
