@@ -1,0 +1,59 @@
+Topic: Troubleshooting Redis container with custom module and config file
+
+Context: We are trying to troubleshoot a Redis container that has a custom module and config file. We have encountered several issues, such as permission errors, missing files, and an empty container log.
+
+Action items:
+
+Remove a socket file and recreate it with correct permissions and ownership
+Create a Docker container with the custom module and config file
+Check container logs for any errors or issues
+Modify the Dockerfile to include the correct directory for the config file
+Build the Docker container with the modified Dockerfile
+Key points:
+
+Custom Redis module and config file
+Docker container
+Permission errors and ownership issues
+Socket file for Redis connection
+Docker build and run commands
+Dockerfile modifications
+Empty container log
+Contextual information:
+
+Docker image is built on top of Debian Buster Slim
+Redis version is 6.2.6-v4-x86_64
+Redis container is mounted on a local directory
+Custom module is built with C++ and copied to the Redis module directory
+Config file is copied to the Redis configuration directory
+Next steps:
+
+Modify the Dockerfile to use the correct directory for the config file
+Rebuild the Docker image with the modified Dockerfile
+Run the Docker container with the correct volume and socket file parameters
+Check the container logs for any errors or issues
+Once you have the summary, please feel free to copy and paste this summary into a new instance of ChatGPT so we can continue our conversation where we left off.
+
+docker build --build-arg REDIS_VER=${REDIS_VER} -t starkdg/imagescout:${VERSION}-${ARCH}-${OSNICK} .
+
+
+❯ docker run -it --rm starkdg/imagescout:${VERSION}-${ARCH}-${OSNICK} ls /usr/lib/redis/6383.conf
+ls: cannot access '/usr/lib/redis/6383.conf': No such file or directory
+failed to resize tty, using default size
+❯ docker run \
+  --detach \
+  --publish 6383:6383 \
+  --volume /tmp/redis_6383.sock:/var/run/redis/6383.sock \
+  --volume "${REDIS_MOUNT}":/data \
+  --name imgscout \
+  starkdg/imagescout:${VERSION}-${ARCH}-${OSNICK}
+
+5f733424783e52ec41ffb523227f179ccf55dd5f9aab4cb6cf54cb5603bbbdb2
+❯ dps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+❯ dckr_rm_all_f
+5f733424783e
+❯ docker run -it --entrypoint /bin/bash starkdg/imagescout:${VERSION}-${ARCH}-${OSNICK}
+
+root@084966a3927e:/# redis-server /etc/redis/redis.conf
+9:C 28 Feb 2023 02:05:52.636 # Fatal error, can't open config file '/etc/redis/redis.conf': No such file or directory
+root@084966a3927e:/# redis-server /etc/redis/6383.conf

@@ -1,69 +1,56 @@
+################################
+# /projects/monorepo-one/services/image-scout/Dockerfile
 # BUILD starkdg/imagescout:${VERSION}-${ARCH}-${OSNICK}
 
-# ARG REDIS_VER=6.0.7
-
-ARG REDIS_VER=7.0.4
-
-# bionic|stretch|buster|etc
-ARG OSNICK=buster
-
-# debian:buster-slim|debian:stretch-slim|ubuntu:bionic
-ARG OS=debian:buster-slim
-
-# x64|arm64v8|arm32v7|etc
-ARG ARCH=x64
+ARG REDIS_VER=6.2.6-v4-x86_64
 
 #---------------------------------------------------------------------
-# redisfab/redis-stack-server:6.2.4-v1
-# FROM redisfab/redis:${REDIS_VER}-${ARCH}-${OSNICK} AS redis
-FROM redisfab/redis-stack-server:6.2.4-v1 AS redis
+# Use the redis/redis-stack base image
+FROM redis/redis-stack:${REDIS_VER} AS redis
 
-# Build based on ${OS} (i.e. 'builder'), redis files are copies from 'redis'
-FROM ${OS} AS builder
+# Build based on an optimized OS, redis files are copied from 'redis'
+FROM debian:buster-slim AS builder
 
-# Re-introduce arguments to this image
-ARG OSNICK
-ARG OS
-ARG ARCH
-ARG REDIS_VER
-
-RUN echo "Building for $OSNICK ($OS) FOR $ARCH"
+# Install dependencies and build the module
+RUN apt-get update \
+  && apt-get install -y \
+  --no-install-recommends ca-certificates \
+  wget build-essential cmake \
+  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /build
 COPY --from=redis /usr/local/ /usr/local/
-ADD CMakeLists.txt *.h *.cpp *.hpp /build/
-
-RUN set -ex;\
-	apt-get -q update ;\
-	apt-get install -y --no-install-recommends ca-certificates wget;\
-	apt-get install -y --no-install-recommends build-essential cmake
-
-RUN set -ex;\
-	cmake -DCMAKE_BUILD_TYPE=Release . ;\
-	make
+COPY CMakeLists.txt *.h *.cpp *.hpp /build/
+RUN cmake -DCMAKE_BUILD_TYPE=Release .
+RUN make
 
 #--------------------------------------------------------------------
 
-# FROM redisfab/redis:${REDIS_VER}-${ARCH}-${OSNICK}
-FROM redisfab/redis-stack-server:6.2.4-v1
+# Use the redis/redis-stack base image
+FROM redis/redis-stack:${REDIS_VER}
 
-ARG OSNICK
-ARG OS
-ARG ARCH
-ARG REDIS_VER
-
-WORKDIR /data
-
+# Set environment variables
 ENV LIBDIR /usr/lib/redis/modules
-ENV LIBREDIS /usr/lib/redis
+ENV CONFDIR /etc/redis
 
-RUN mkdir -p $LIBDIR
+# Copy the module and conf file
+RUN mkdir -p ${LIBDIR} ${CONFDIR}
+COPY --from=builder /build/imgscout.so ${LIBDIR}
+COPY ./6383.conf ${CONFDIR}
 
-COPY --from=builder /build/imgscout.so "$LIBDIR"
-COPY ./6383.conf "$LIBREDIS"
-# sudo useradd username
-RUN chmod 644 /usr/lib/redis/6383.conf && useradd redis && chown redis /usr/lib/redis/6383.conf
+# Create the redis user and set permissions on the conf file
+RUN useradd redis \
+  && chmod 644 ${CONFDIR}/6383.conf \
+  && chown redis ${CONFDIR}/6383.conf
+
+# Create a UNIX socket file (optional)
+RUN mkdir -p /var/run/redis \
+  && chown redis:redis /var/run/redis \
+  && chmod 775 /var/run/redis \
+  && touch /var/run/redis/6383.sock \
+  && chown redis:redis /var/run/redis/6383.sock
 
 EXPOSE 6383
 
 CMD ["redis-server", "/usr/lib/redis/6383.conf"]
+################################
