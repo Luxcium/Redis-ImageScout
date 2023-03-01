@@ -1,0 +1,99 @@
+################################
+# Path to this file: /projects/monorepo-one/services/image-scout/Dockerfile
+# BUILD luxcium/imagescout:${VERSION}-${ARCH}-${OSNICK}
+#---------------------------------------------------------------------
+#redis/redis-stack-server:6.2.6-v4-x86_64
+
+# BUILD starkdg/imagescout:${VERSION}-${ARCH}-${OSNICK}
+
+# ARG REDIS_VER=6.0.7
+
+
+
+# bionic|stretch|buster|etc
+ARG OSNICK=buster
+
+# debian:buster-slim|debian:stretch-slim|ubuntu:bionic
+ARG OS=debian:buster-slim
+
+# x64|arm64v8|arm32v7|etc
+ARG ARCH=x64
+
+#---------------------------------------------------------------------
+ARG REDIS_VER=6.2.6-v4-x86_64
+# redis/redis-stack-server:6.2.6-v4-x86_64
+FROM redis/redis-stack-server:${REDIS_VER} AS redis
+# https://hub.docker.com/layers/redis/redis-stack-server/6.2.6-v4-x86_64/images/sha256-b72b1a58229eb1546071c8ca7a8ffa30534c42075135d1b7dcb65efebbe0f30b
+# Build based on ${OS} (i.e. 'builder'), redis files are copies from 'redis'
+FROM ${OS} AS builder
+
+# Re-introduce arguments to this image
+ARG OSNICK
+ARG OS
+ARG ARCH
+ARG REDIS_VER
+
+RUN echo "Building for $OSNICK ($OS) FOR $ARCH"
+
+WORKDIR /build
+COPY --from=redis /usr/local/ /usr/local/
+ADD CMakeLists.txt *.h *.cpp *.hpp /build/
+
+RUN set -ex;\
+	apt-get -q update ;\
+	apt-get install -y --no-install-recommends ca-certificates wget;\
+	apt-get install -y --no-install-recommends build-essential cmake
+
+RUN set -ex;\
+	cmake -DCMAKE_BUILD_TYPE=Release . ;\
+	make
+
+#--------------------------------------------------------------------
+
+ARG REDIS_VER=6.2.6-v4-x86_64
+# redis/redis-stack-server:6.2.6-v4-x86_64
+FROM redis/redis-stack-server:${REDIS_VER}
+# https://hub.docker.com/layers/redis/redis-stack-server/6.2.6-v4-x86_64/images/sha256-b72b1a58229eb1546071c8ca7a8ffa30534c42075135d1b7dcb65efebbe0f30b
+
+ARG OSNICK
+ARG OS
+ARG ARCH
+ARG REDIS_VER
+
+WORKDIR /data
+
+# Set environment variables
+ENV LIBDIR /usr/lib/redis/modules
+ENV CONFDIR /etc/redis
+
+# Copy the module and conf file
+RUN mkdir -p ${LIBDIR} ${CONFDIR}
+COPY --from=builder /build/imgscout.so ${LIBDIR}
+COPY 6383.conf ${CONFDIR}/6383.conf
+
+# Create the redis user and set permissions on the conf file
+# RUN useradd redis \
+# 	&& chmod 777 ${CONFDIR}/6383.conf \
+# 	&& chown redis ${CONFDIR}/6383.conf
+
+
+# ENV LIBDIR /usr/lib/redis/modules
+# ENV LIBREDIS /usr/lib/redis
+
+# RUN mkdir -p $LIBDIR
+
+# COPY --from=builder /build/imgscout.so "$LIBDIR"
+# COPY ./6383.conf "$LIBREDIS"
+# sudo useradd username
+RUN chmod 644 ${CONFDIR}/6383.conf \
+	&& useradd redis \
+	&& chown redis ${CONFDIR}/6383.conf
+
+EXPOSE 6383
+
+CMD ["redis-server", "/usr/lib/redis/6383.conf"]
+
+# REDIS_VER=6.2.6-v4-x86_64 docker build --build-arg REDIS_VER=${REDIS_VER} -t luxcium/imagescout:${REDIS_VER}-${VERSION} .
+# docker run -it --entrypoint /bin/bash luxcium/imagescout:${REDIS_VER}-${VERSION}
+# redis-server /etc/redis/6383.conf
+# cat redis-server /etc/redis/6383.conf | grep socket

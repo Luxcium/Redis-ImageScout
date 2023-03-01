@@ -2,7 +2,7 @@
 
 # ARG REDIS_VER=6.0.7
 
-ARG REDIS_VER=7.0.4
+ARG REDIS_VER=7.0.8
 
 # bionic|stretch|buster|etc
 ARG OSNICK=buster
@@ -16,7 +16,7 @@ ARG ARCH=x64
 #---------------------------------------------------------------------
 # redisfab/redis-stack-server:6.2.4-v1
 # FROM redisfab/redis:${REDIS_VER}-${ARCH}-${OSNICK} AS redis
-FROM redisfab/redis-stack-server:6.2.4-v1 AS redis
+FROM redisfab/redis-stack:6.2.4-v1 AS redis
 
 # Build based on ${OS} (i.e. 'builder'), redis files are copies from 'redis'
 FROM ${OS} AS builder

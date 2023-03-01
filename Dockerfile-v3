@@ -1,0 +1,74 @@
+################################
+# Path to this file: /projects/monorepo-one/services/image-scout/Dockerfile
+# BUILD luxcium/imagescout:${VERSION}-${ARCH}-${OSNICK}
+#---------------------------------------------------------------------
+#redis/redis-stack-server:6.2.6-v4-x86_64
+
+ARG REDIS_VER=6.2.6-v4-x86_64
+# Use the redis/redis-stack base image
+FROM redis/redis-stack-server:${REDIS_VER} AS redis
+# https://hub.docker.com/layers/redis/redis-stack-server/6.2.6-v4-x86_64/images/sha256-b72b1a58229eb1546071c8ca7a8ffa30534c42075135d1b7dcb65efebbe0f30b
+
+# ARG OSNICK=38
+# Build based on an optimized OS, redis files are copied from 'redis'
+FROM fedora:38 AS builder
+
+# Install dependencies and build the module
+RUN dnf upgrade -y \
+  && dnf install -y \
+  ca-certificates \
+  wget \
+  cmake \
+  make \
+  gcc \
+  gcc-c++ \
+  glibc-devel \
+  glibc-headers \
+  kernel-devel \
+  kernel-headers \
+  libstdc++-static \
+  && dnf clean all \
+  && rm -rf /var/cache/dnf
+
+
+WORKDIR /build
+COPY --from=redis /usr/local/ /usr/local/
+COPY CMakeLists.txt *.h *.cpp *.hpp /build/
+RUN cmake -DCMAKE_BUILD_TYPE=Release .
+RUN make
+
+#--------------------------------------------------------------------
+
+# Use the redis/redis-stack base image
+FROM redis/redis-stack-server:${REDIS_VER}
+
+# Set environment variables
+ENV LIBDIR /usr/lib/redis/modules
+ENV CONFDIR /etc/redis
+
+# Copy the module and conf file
+RUN mkdir -p ${LIBDIR} ${CONFDIR}
+COPY --from=builder /build/imgscout.so ${LIBDIR}
+COPY 6383.conf ${CONFDIR}/6383.conf
+
+# Create the redis user and set permissions on the conf file
+RUN useradd redis \
+  && chmod 777 ${CONFDIR}/6383.conf \
+  && chown redis ${CONFDIR}/6383.conf
+
+# Create a UNIX socket file (optional)
+RUN mkdir -p /var/run/redis \
+  && chown redis:redis /var/run/redis \
+  && chmod 775 /var/run/redis \
+  && touch /var/run/redis/6383.sock \
+  && chown redis:redis /var/run/redis/6383.sock
+
+EXPOSE 6383
+
+CMD ["redis-server", "/usr/lib/redis/6383.conf"]
+################################
+# docker build --build-arg REDIS_VER=${REDIS_VER} -t luxcium/imagescout:${VERSION}-${ARCH}-${OSNICK} .
+# docker build --build-arg REDIS_VER=${REDIS_VER} --build-arg OSNICK=${OSNICK} -t luxcium/imagescout:${VERSION}-${ARCH}-${OSNICK} -f Dockerfile .
+# docker run -it --entrypoint /bin/bash luxcium/imagescout:${VERSION}-${ARCH}-${OSNICK}
+# redis-server /etc/redis/6383.conf
+# cat redis-server /etc/redis/6383.conf | grep socket
