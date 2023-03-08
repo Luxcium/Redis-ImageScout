@@ -34,8 +34,8 @@ RUN dnf upgrade -y \
 WORKDIR /build
 COPY --from=redis /usr/local/ /usr/local/
 COPY CMakeLists.txt *.h *.cpp *.hpp /build/
-RUN cmake -DCMAKE_BUILD_TYPE=Release .
-RUN make
+RUN cmake -DCMAKE_BUILD_TYPE=Release . \
+  && make
 
 #--------------------------------------------------------------------
 

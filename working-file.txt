@@ -1,0 +1,89 @@
+# BUILD starkdg/imagescout:${VERSION}-${ARCH}-${OSNICK}
+
+# ARG REDIS_VER=6.0.7
+
+ARG REDIS_VER=7.0.4
+
+# bionic|stretch|buster|etc
+ARG OSNICK=buster
+
+# debian:buster-slim|debian:stretch-slim|ubuntu:bionic
+
+# x64|arm64v8|arm32v7|etc
+ARG ARCH=x64
+ARG OS=debian:buster-slim
+
+# ARG OSNICK=38
+# Build based on an optimized OS, redis files are copied from 'redis'
+# FROM fedora:38 AS builder
+
+# Install dependencies and build the module
+# RUN set -ex; \
+# 	dnf upgrade -y \
+# 	&& dnf install -y \
+# 	ca-certificates \
+# 	wget \
+# 	cmake \
+# 	make \
+# 	gcc \
+# 	gcc-c++ \
+# 	glibc-devel \
+# 	glibc-headers \
+# 	kernel-devel \
+# 	kernel-headers \
+# 	libstdc++-static \
+# 	&& dnf clean all \
+# 	&& rm -rf /var/cache/dnf
+
+# # Re-introduce arguments to this image
+# ARG OSNICK
+# ARG OS
+# ARG ARCH
+# ARG REDIS_VER
+
+# RUN set -ex;\
+# 	cmake -DCMAKE_BUILD_TYPE=Release . ;\
+# 	make
+
+# WORKDIR /build
+# COPY --from=redis /usr/local/ /usr/local/
+# ADD CMakeLists.txt *.h *.cpp *.hpp /build/
+# RUN set -ex; \
+# 	cmake -DCMAKE_BUILD_TYPE=Release . \
+# 	&& make
+
+
+
+# #--------------------------------------------------------------------
+
+# # Use the redis/redis-stack base image
+# # FROM redis/redis-stack-server:6.2.6-v4-x86_64
+
+# # Set environment variables
+# ENV LIBDIR /usr/lib/redis/modules
+# ENV CONFDIR /etc/redis
+
+
+
+# # Create the redis user and set permissions on the conf file
+# RUN useradd redis \
+# 	&& chmod 777 ${CONFDIR}/6383.conf \
+# 	&& chown redis ${CONFDIR}/6383.conf
+
+# # Create a UNIX socket file (optional)
+# RUN mkdir -p /var/run/redis \
+# 	&& chown redis:redis /var/run/redis \
+# 	&& chmod 775 /var/run/redis \
+# 	&& touch /var/run/redis/6383.sock \
+# 	&& chown redis:redis /var/run/redis/6383.sock
+
+# EXPOSE 6383
+
+# CMD ["redis-server", "/usr/lib/redis/6383.conf"]
+
+
+# # FROM redisfab/redis:${REDIS_VER}-${ARCH}-${OSNICK}
+# FROM redisfab/redis-stack-server:6.2.4-v1
+
+# redisfab/redis-stack-server:6.2.4-v1
+# FROM redisfab/redis:${REDIS_VER}-${ARCH}-${OSNICK} AS redis
