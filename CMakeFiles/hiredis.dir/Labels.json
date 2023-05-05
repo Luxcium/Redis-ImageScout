@@ -1,43 +1,38 @@
 {
-	"sources" : 
-	[
-		{
-			"file" : "/home/luxcium/src/Redis-ImageScout/CMakeFiles/hiredis"
-		},
-		{
-			"file" : "/home/luxcium/src/Redis-ImageScout/CMakeFiles/hiredis.rule"
-		},
-		{
-			"file" : "/home/luxcium/src/Redis-ImageScout/CMakeFiles/hiredis-complete.rule"
-		},
-		{
-			"file" : "/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-build.rule"
-		},
-		{
-			"file" : "/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-configure.rule"
-		},
-		{
-			"file" : "/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-download.rule"
-		},
-		{
-			"file" : "/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-install.rule"
-		},
-		{
-			"file" : "/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-mkdir.rule"
-		},
-		{
-			"file" : "/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-patch.rule"
-		},
-		{
-			"file" : "/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-update.rule"
-		}
-	],
-	"target" : 
-	{
-		"labels" : 
-		[
-			"hiredis"
-		],
-		"name" : "hiredis"
-	}
+  "sources": [
+    {
+      "file": "/home/luxcium/src/Redis-ImageScout/CMakeFiles/hiredis"
+    },
+    {
+      "file": "/home/luxcium/src/Redis-ImageScout/CMakeFiles/hiredis.rule"
+    },
+    {
+      "file": "/home/luxcium/src/Redis-ImageScout/CMakeFiles/hiredis-complete.rule"
+    },
+    {
+      "file": "/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-build.rule"
+    },
+    {
+      "file": "/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-configure.rule"
+    },
+    {
+      "file": "/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-download.rule"
+    },
+    {
+      "file": "/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-install.rule"
+    },
+    {
+      "file": "/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-mkdir.rule"
+    },
+    {
+      "file": "/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-patch.rule"
+    },
+    {
+      "file": "/home/luxcium/src/Redis-ImageScout/hiredis/src/hiredis-stamp/hiredis-update.rule"
+    }
+  ],
+  "target": {
+    "labels": ["hiredis"],
+    "name": "hiredis"
+  }
 }
