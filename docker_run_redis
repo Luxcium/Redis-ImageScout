@@ -1,12 +1,10 @@
 #!/bin/bash
-
 function main() {
   SCRIPT_DIR=$(getSource)
   cd "$SCRIPT_DIR" || return
 
   REDIS_MOUNT="${HOME}"/DATA/redis/6383
 
-  # <<<<<<< HEAD
   docker build --tag luxcium-imgscout:0.1.1 . || return 33
   (
     (docker container rm imgscout) >/dev/null ||
@@ -15,21 +13,7 @@ function main() {
   ) 2>/dev/null
   docker run --detach --rm --publish 6383:6383 --volume "${REDIS_MOUNT}":/data --name imgscout luxcium-imgscout:0.1.1 || return 55
 }
-#  --detach
-# --interactive --tty
-# --rm
-# =======
-#   docker build --no-cache --tag luxcium-imgscout:0.2 . || return 33
-#   (docker container rm -f imgscout) >/dev/null 2>&1
-#   docker run \
-#     --detach \
-#     --publish 6383:6383 \
-#     --volume /tmp/redis_6383.sock:/var/run/redis/6383.sock \
-#     --volume "${REDIS_MOUNT}":/data \
-#     --name imgscout luxcium-imgscout:0.2 || return 55
-# }
-# ##
-# >>>>>>> image-scout
+
 function getSource() {
   SOURCE=${BASH_SOURCE[0]}
   while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
