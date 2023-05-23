@@ -13,7 +13,7 @@ function main() {
   ) 2>/dev/null
   docker run --detach --rm --publish 6383:6383 --volume "${REDIS_MOUNT}":/data --name imgscout luxcium-imgscout:0.1.1 || return 55
 }
-
+# docker run -it --entrypoint /bin/bash --rm --publish 6383:6383 --volume "${REDIS_MOUNT}":/data --name imgscout luxcium-imgscout:0.1.2
 function getSource() {
   SOURCE=${BASH_SOURCE[0]}
   while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
