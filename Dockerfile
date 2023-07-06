@@ -47,10 +47,11 @@ RUN set -ex;\
 	cmake -DCMAKE_BUILD_TYPE=Release . ;\
 	make
 
+
 #--------------------------------------------------------------------
 
-# FROM redisfab/redis:${REDIS_VER}-${ARCH}-${OSNICK} // :6.2.4-v1
-FROM redis/redis-stack:${REDIS_VER} as stack
+# FROM redisfab/redis:${REDIS_VER}-${ARCH}-${OSNICK}
+FROM redisfab/redis-stack-server:6.2.4-v1
 
 ARG OSNICK
 ARG OS
@@ -59,29 +60,56 @@ ARG REDIS_VER
 
 WORKDIR /data
 
-# /usr/lib/redis/modules
 ENV LIBDIR /usr/lib/redis/modules
 ENV LIBREDIS /usr/lib/redis
 
 RUN mkdir -p $LIBDIR
-RUN mkdir -p $LIBREDIS
 
 COPY --from=builder /build/imgscout.so "$LIBDIR"
-RUN cp /opt/redis-stack/lib/redistimeseries.so "$LIBDIR"; \
-	cp /opt/redis-stack/lib/redistimeseries.so "$LIBDIR"; \
-	cp /opt/redis-stack/lib/redisbloom.so "$LIBDIR"; \
-	cp /opt/redis-stack/lib/rejson.so "$LIBDIR"; \
-	cp /opt/redis-stack/lib/redisearch.so "$LIBDIR"; \
-	cp /opt/redis-stack/lib/redisgears.so "$LIBDIR"; \
-	cp /opt/redis-stack/lib/libredisgears_v8_plugin.so "$LIBDIR";
-
 COPY ./6383.conf "$LIBREDIS"
 # sudo useradd username
-RUN chmod 644 ${LIBREDIS}/6383.conf && useradd redis && chown redis:root ${LIBREDIS}/6383.conf
-RUN chmod 644 -R ${LIBDIR} && chown redis:root -R ${LIBDIR}
-
-RUN ls -alh $LIBDIR
-RUN ls -alh $LIBREDIS
+RUN chmod 644 /usr/lib/redis/6383.conf && useradd redis && chown redis /usr/lib/redis/6383.conf
 
 EXPOSE 6383
+
 CMD ["redis-server", "/usr/lib/redis/6383.conf"]
+
+
+# #--------------------------------------------------------------------
+
+# # FROM redisfab/redis:${REDIS_VER}-${ARCH}-${OSNICK} // :6.2.4-v1
+# FROM redis/redis-stack:${REDIS_VER} as stack
+
+# ARG OSNICK
+# ARG OS
+# ARG ARCH
+# ARG REDIS_VER
+
+# WORKDIR /data
+
+# # /usr/lib/redis/modules
+# ENV LIBDIR /usr/lib/redis/modules
+# ENV LIBREDIS /usr/lib/redis
+
+# RUN mkdir -p $LIBDIR
+# RUN mkdir -p $LIBREDIS
+
+# COPY --from=builder /build/imgscout.so "$LIBDIR"
+# # RUN cp /opt/redis-stack/lib/redistimeseries.so "$LIBDIR"; \
+# # 	cp /opt/redis-stack/lib/redistimeseries.so "$LIBDIR"; \
+# # 	cp /opt/redis-stack/lib/redisbloom.so "$LIBDIR"; \
+# # 	cp /opt/redis-stack/lib/rejson.so "$LIBDIR"; \
+# # 	cp /opt/redis-stack/lib/redisearch.so "$LIBDIR"; \
+# # 	cp /opt/redis-stack/lib/redisgears.so "$LIBDIR"; \
+# # 	cp /opt/redis-stack/lib/libredisgears_v8_plugin.so "$LIBDIR";
+
+# COPY ./6383.conf "$LIBREDIS"
+# # sudo useradd username
+# RUN chmod 644 ${LIBREDIS}/6383.conf && useradd redis && chown redis:root ${LIBREDIS}/6383.conf
+# RUN chmod 644 -R ${LIBDIR} && chown redis:root -R ${LIBDIR}
+
+# RUN ls -alh $LIBDIR
+# RUN ls -alh $LIBREDIS
+
+# EXPOSE 6383
+# CMD ["redis-server", "/usr/lib/redis/6383.conf"]
