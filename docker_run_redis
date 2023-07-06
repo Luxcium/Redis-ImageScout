@@ -7,7 +7,7 @@ function main() {
 
   # --progress=tty --no-cache
   # --progress=plain --no-cache
-  docker build --progress=plain --no-cache --tag luxcium-imgscout:0.1.1 . || return 33
+  docker build --progress=tty --tag luxcium-imgscout:0.1.1 . || return 33
 
   (docker container rm -f imgscout) >/dev/null 2>&1
 
